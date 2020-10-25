@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+   <html>
+   <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <style>
+   .header {
+     background-color: #F1F1F1;
+     padding: 30px;
+     text-align: center;
+   }
+   body {
+     margin: 0;
+     font-size: 25px;
+     font-family: Arial, Helvetica, sans-serif;
+   }
+   #navbar {
+     overflow: hidden;
+     background-color: #CCB5FF;
+     color: black;
+   }
+   #navbar a {
+     float: left;
+     display: block;
+     color: #F2F2F2;
+     text-align: center;
+     padding: 14px 16px;
+     text-decoration: none;
+     font-size: 17px;
+   }
+   #navbar a:hover {
+     background-color: #ddd;
+     color: black;
+   }
+   #navbar a.active {
+     background-color: #B19CD9;
+     color: white;
+   }
+   .content {
+     padding: 16px;
+   }
+   .sticky {
+     position: fixed;
+     top: 0;
+     width: 100%;
+   }
+   .sticky + .content {
+     padding-top: 60px;
+   }
+   body, html {
+ height: 100%;
+ margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+}
+.hero-image {
+ background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url("clouds.gif");
+ height: 50%;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+ position: relative;
+}
+.hero-text {
+ text-align: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ color: white;
+}
+   </style>
+   </head>
+   <body>
+   <div class="hero-image">
+       <div class="hero-text">
+           <h1>Coffee Chats</h1>
+       </div>
+   </div>
+   <div id="navbar">
+     <a href = Welcome2.htm>Welcome</a>
+     <a href = Islamophobia.htm>Islamophobia</a>
+     <a href = MuslimWomen.htm>Muslim Women</a>
+     <a href = Solutions.htm>Solutions</a>
+     <a href = OurApp.htm>Our App</a>
+     <a href = CoffeeChats.htm>Coffee Chats</a>
+     <a href = FurtherReadings.htm>Further Readings</a>
+   </div>
+   <div class="content">
+     <h3>Meet Up With Others! </h3>
+     <p>Find and chat with supportive people over a cup of coffee (or any drink)!</p>
+     <p>Use the calendar below to join a coffee chat over Google Meet.</p>
+<iframe src="https://calendar.google.com/calendar/embed?src=7pf9o7bs7rqlmpqq0nc5nrhuao%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="1300" height="1000" frameborder="0" scrolling="no"></iframe>
+   </div>
+   <script>
+   window.onscroll = function() {myFunction()};
+   var navbar = document.getElementById("navbar");
+   var sticky = navbar.offsetTop;
+   function myFunction() {
+     if (window.pageYOffset >= sticky) {
+       navbar.classList.add("sticky")
+     } else {
+       navbar.classList.remove("sticky");
+     }
+   }
+   </script>
+   </body>
+   </html>
+
