@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://shriyasudhakar.github.io/",
+  "homepage": "https://shriyasudhakar.github.io/shriyasudhakar.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
