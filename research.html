@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Shriya Sudhakar</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="ambient">
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div><nav>
+  <div class="nav-l">
+    <a class="nav-name" href="index.html">Shriya Sudhakar</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html" class="on">Research</a></li>
+      <li><a href="teaching.html">Teaching</a></li>
+      <li><a href="work.html">Work</a></li>
+    </ul>
+  </div>
+  <button class="tog" onclick="T()" aria-label="Toggle theme"><div class="tog-dot"></div></button>
+</nav>
+<div class="page">
+<div class="content">
+    <div class="pg-top">
+      <p class="pg-kicker">Research</p>
+      <p class="pg-intro">Scaling laws, diffusion-based language models, and generative music.</p>
+    </div>
+    <div class="ftabs">
+      <button class="on" onclick="fp('all',this)">All</button>
+      <button onclick="fp('ml',this)">ML / NLP</button>
+    </div>
+    <div class="paper reveal" data-t="ml">
+      <div class="pt">Prescriptive Scaling Laws for Data Constrained Training</div>
+      <div class="pa" style="color:var(--mid)">Justin Lovelace, Christian Belardi, Srivatsa Kundurthy, <u>Shriya Sudhakar</u>, Kilian Weinberger</div>
+      <div class="pv">COLM 2026</div>
+      <div class="pchips"><span class="pchip">Scaling Laws</span><span class="pchip">Deep Learning</span></div>
+      <a class="plink" href="https://arxiv.org/abs/2605.01640" target="_blank">arXiv ↗</a>
+    </div>
+  </div>
+</div>
+<footer>&copy; 2026 Shriya Sudhakar</footer>
+<script src="shared.js"></script>
+</body>
+</html>
