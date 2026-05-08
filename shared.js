@@ -70,7 +70,9 @@ function navigate(url) {
 
 function bindNav() {
   document.querySelectorAll('.nav-links a').forEach(a => {
-    a.addEventListener('click', function(e) {
+    const newA = a.cloneNode(true);
+    a.parentNode.replaceChild(newA, a);
+    newA.addEventListener('click', function(e) {
       e.preventDefault();
       navigate(this.getAttribute('href'));
     });
