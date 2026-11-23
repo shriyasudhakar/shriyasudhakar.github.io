@@ -1,73 +1,163 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shriya Sudhakar</title>
+<script>(function(){var t=localStorage.getItem('th');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="ambient">
-  <div class="orb orb1"></div>
-  <div class="orb orb2"></div>
-  <div class="orb orb3"></div>
-</div><nav>
-  <div class="nav-l">
-    <a class="nav-name" href="index.html">Shriya Sudhakar</a>
-    <ul class="nav-links">
-      <li><a href="index.html" class="on">Home</a></li>
-      <li><a href="research.html">Research</a></li>
-      <li><a href="teaching.html">Teaching</a></li>
-      <li><a href="work.html">Work</a></li>
+
+<button class="tog" onclick="T()" aria-label="Toggle dark mode" title="Toggle dark mode">☾</button>
+
+<main class="page">
+
+  <!-- HEADER -->
+  <header class="hero">
+    <div class="hero-text">
+      <h1>Shriya Sudhakar</h1>
+      <p>I'm an M.S. student in Computer Science at
+        <a href="https://www.cs.stanford.edu/masters-program-overview">Stanford University</a>
+        and a researcher at the <a href="https://ai.stanford.edu/">Stanford AI Lab (SAIL)</a>.
+        I graduated from <a href="https://www.cs.cornell.edu/">Cornell University</a> in 2026 with a B.S. in
+        Computer Science (Honors) and a minor in Artificial Intelligence, and received the
+        <a href="https://infosci.cornell.edu/news-stories/you-are-holding-pen-1300-bowers-graduates-honored-recognition-ceremonies">Jonathan E. Marx Memorial Senior Prize</a>.
+        I was advised by
+        <a href="https://johnthickstun.com/">Prof. John Thickstun</a> and
+        <a href="https://www.cs.cornell.edu/~kilian/">Prof. Kilian Q. Weinberger</a> and worked on
+        scaling laws and language model pretraining.</p>
+      <p>This past summer, I was a software engineering intern at Google working on browser agents.</p>
+      <p>I'm broadly interested in <b>generative modeling</b>, <b>scaling laws</b>,
+        <b>language model pretraining</b>, and <b>agents</b>. Outside of research, I love <a href="#teaching">teaching</a>!</p>
+      <p class="links">
+        <a href="https://scholar.google.com/citations?hl=en&user=G0qFF0YAAAAJ" target="_blank">Scholar</a> /
+        <a href="https://github.com/shriyasudhakar" target="_blank">GitHub</a> /
+        <a href="https://www.linkedin.com/in/shriya-sudhakar-b2701b212/" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+    <div class="photo"><img src="photo.jpg" alt="Shriya Sudhakar"></div>
+  </header>
+
+  <!-- RESEARCH -->
+  <section id="research">
+    <h2>Research</h2>
+
+    <div class="paper">
+      <a class="thumb" href="https://neurips.cc/virtual/2026/poster/150255" target="_blank" aria-label="Paper">
+        <!-- doodle: a token sequence with masked spans -->
+        <svg viewBox="0 0 160 110" aria-hidden="true">
+          <g class="tok"><rect x="14" y="30" width="18" height="18" rx="3"/><rect x="36" y="30" width="18" height="18" rx="3"/></g>
+          <g class="mask"><rect x="58" y="30" width="18" height="18" rx="3"/><rect x="80" y="30" width="18" height="18" rx="3"/></g>
+          <g class="tok"><rect x="102" y="30" width="18" height="18" rx="3"/><rect x="124" y="30" width="18" height="18" rx="3"/></g>
+          <g class="tok"><rect x="14" y="62" width="18" height="18" rx="3"/></g>
+          <g class="mask"><rect x="36" y="62" width="18" height="18" rx="3"/></g>
+          <g class="tok"><rect x="58" y="62" width="18" height="18" rx="3"/><rect x="80" y="62" width="18" height="18" rx="3"/><rect x="102" y="62" width="18" height="18" rx="3"/></g>
+          <g class="mask"><rect x="124" y="62" width="18" height="18" rx="3"/></g>
+        </svg>
+      </a>
+      <div class="pbody">
+        <a class="ptitle" href="https://neurips.cc/virtual/2026/poster/150255" target="_blank">Language Denoising Objectives Extend the Value of Limited Data</a>
+        <p class="authors">Justin Lovelace, Christian Belardi, Srivatsa Kundurthy, <b>Shriya Sudhakar</b>, Kilian Q. Weinberger</p>
+        <p class="venue"><span class="v">NeurIPS</span>, 2026 &nbsp; <a href="https://neurips.cc/virtual/2026/poster/150255" target="_blank">[paper]</a></p>
+        <p class="desc">Denoising objectives like span corruption hold up much better than next-token prediction when pretraining data has to be repeated.</p>
+      </div>
+    </div>
+
+    <div class="paper">
+      <a class="thumb" href="https://openreview.net/forum?id=LEhifQT0NN" target="_blank" aria-label="Paper">
+        <!-- doodle: a commitment ledger, mostly kept -->
+        <svg viewBox="0 0 160 110" aria-hidden="true">
+          <rect x="30" y="10" width="100" height="86" rx="6" class="sheet"/>
+          <g class="line"><line x1="58" y1="28" x2="118" y2="28"/><line x1="58" y1="46" x2="110" y2="46"/><line x1="58" y1="64" x2="118" y2="64"/><line x1="58" y1="82" x2="104" y2="82"/></g>
+          <g class="ok"><path d="M40 28 l4 4 l8 -8"/><path d="M40 46 l4 4 l8 -8"/><path d="M40 82 l4 4 l8 -8"/></g>
+          <g class="bad"><path d="M41 60 l8 8 M49 60 l-8 8"/></g>
+        </svg>
+      </a>
+      <div class="pbody">
+        <a class="ptitle" href="https://openreview.net/forum?id=LEhifQT0NN" target="_blank">Do Coding Agents Keep Their Word? Design-Commitment Drift and Context Management in Multi-Turn Repository Work</a>
+        <p class="authors"><b>Shriya Sudhakar</b></p>
+        <p class="venue"><span class="v">NeurIPS Workshop on Verifying Agents</span>, 2026 &nbsp; <a href="https://openreview.net/forum?id=LEhifQT0NN" target="_blank">[paper]</a> <a href="coding_drift_2026.pdf" target="_blank">[pdf]</a></p>
+        <p class="desc">Treats the design decisions a coding agent states as checkable constraints on its code, and finds that showing the agent a ledger of its own past commitments sharply cuts design drift.</p>
+      </div>
+    </div>
+
+    <div class="paper">
+      <a class="thumb" href="https://arxiv.org/abs/2606.14958" target="_blank" aria-label="Paper">
+        <!-- doodle: film strip of video frames -->
+        <svg viewBox="0 0 160 110" aria-hidden="true">
+          <rect x="10" y="22" width="140" height="60" rx="4" class="strip"/>
+          <g class="hole"><rect x="16" y="26" width="8" height="5" rx="1"/><rect x="40" y="26" width="8" height="5" rx="1"/><rect x="64" y="26" width="8" height="5" rx="1"/><rect x="88" y="26" width="8" height="5" rx="1"/><rect x="112" y="26" width="8" height="5" rx="1"/><rect x="136" y="26" width="8" height="5" rx="1"/>
+          <rect x="16" y="73" width="8" height="5" rx="1"/><rect x="40" y="73" width="8" height="5" rx="1"/><rect x="64" y="73" width="8" height="5" rx="1"/><rect x="88" y="73" width="8" height="5" rx="1"/><rect x="112" y="73" width="8" height="5" rx="1"/><rect x="136" y="73" width="8" height="5" rx="1"/></g>
+          <rect x="16" y="35" width="38" height="34" rx="2" class="f1"/><rect x="61" y="35" width="38" height="34" rx="2" class="f2"/><rect x="106" y="35" width="38" height="34" rx="2" class="f3"/>
+        </svg>
+      </a>
+      <div class="pbody">
+        <a class="ptitle" href="https://arxiv.org/abs/2606.14958" target="_blank">MVEB: Massive Video Embedding Benchmark</a>
+        <p class="authors">Adnan El Assadi, Roman Solomatin, Isaac Chung, Chenghao Xiao, Deep Shah, Manan Dey, <b>Shriya Sudhakar</b>, Zacharie Bugaud, Wissam Siblini, Ayush Sunil Munot, Yashwanth Devavarapu, Rakshitha Ireddi, Michelle Yang, Márton Kardos, Niklas Muennighoff, Kenneth Enevoldsen</p>
+        <p class="venue"><span class="v">arXiv</span>, 2026 &nbsp; <a href="https://arxiv.org/abs/2606.14958" target="_blank">[paper]</a> <a href="https://github.com/embeddings-benchmark/mteb" target="_blank">[code]</a></p>
+        <p class="desc">A 23-task benchmark for video embeddings, built into the MTEB ecosystem.</p>
+      </div>
+    </div>
+
+    <div class="paper hl">
+      <a class="thumb" href="https://arxiv.org/abs/2605.01640" target="_blank" aria-label="Paper">
+        <!-- little doodle: loss curves bending as data repeats -->
+        <svg viewBox="0 0 160 110" aria-hidden="true">
+          <line x1="18" y1="92" x2="150" y2="92" class="ax"/>
+          <line x1="18" y1="92" x2="18" y2="10" class="ax"/>
+          <path d="M22 22 C 50 55, 80 70, 148 78" class="c1"/>
+          <path d="M22 30 C 50 62, 78 70, 112 72 S 140 70, 148 66" class="c2"/>
+          <path d="M22 38 C 46 66, 70 72, 92 72 S 128 62, 148 54" class="c3"/>
+          <circle cx="100" cy="73" r="3" class="dot"/>
+          <text x="84" y="106">compute</text>
+          <text x="4" y="58" transform="rotate(-90 8 58)">loss</text>
+        </svg>
+      </a>
+      <div class="pbody">
+        <a class="ptitle" href="https://arxiv.org/abs/2605.01640" target="_blank">Prescriptive Scaling Laws for Data Constrained Training</a>
+        <p class="authors">Justin Lovelace, Christian Belardi, Srivatsa Kundurthy, <b>Shriya Sudhakar</b>, Kilian Q. Weinberger</p>
+        <p class="venue"><span class="v">COLM</span>, 2026 &nbsp; <a href="https://arxiv.org/abs/2605.01640" target="_blank">[paper]</a></p>
+        <p class="desc">How to train compute-optimally when pretraining data runs out and has to be repeated.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="bullets">
+      <li><b>Software Engineering Intern @ Google</b> <span class="when">(Summer 2026)</span>: Browser agents.</li>
+      <li><b>Software Engineering Intern @ Google</b> <span class="when">(Summer 2025)</span>: Google Sheets AI.</li>
+      <li><b>Software Engineering Intern @ Google</b> <span class="when">(Summer 2024)</span>: A/B experimentation and productivity tools.</li>
+      <li><b>Software Engineering Intern @ Bloomberg</b> <span class="when">(Summers 2021–2023)</span>: Securities, BLAW, and News teams.</li>
     </ul>
-  </div>
-  <button class="tog" onclick="T()" aria-label="Toggle theme"><div class="tog-dot"></div></button>
-</nav>
-<div class="page">
-<div class="hero">
-    <div>
-      <p class="hero-kicker">CS &amp; AI · Cornell Engineering</p>
-      <h1 class="hero-name">Shriya<br>Sudhakar</h1>
-      <p class="hero-bio">Undergraduate at Cornell studying Computer Science, minoring in AI. Advised by <a href="">Prof. John Thickstun</a> and <a href="">Prof. Kilian Weinberger</a>.</p>
-      <p></p>
-      <p class="hero-bio" style="margin-top: 0.5rem;">Contributor to <a href="https://embeddings-benchmark.github.io/mteb/">MTEB/MVEB</a></p>
-      <div class="hero-links">
-        <a class="hl" href="https://github.com/shriyasudhakar" target="_blank">GitHub <span class="arr">↗</span></a>
-        <a class="hl" href="https://www.linkedin.com/in/shriya-sudhakar-b2701b212/" target="_blank">LinkedIn <span class="arr">↗</span></a>
-        <a class="hl" href="https://scholar.google.com/citations?hl=en&user=G0qFF0YAAAAJ" target="_blank">Scholar <span class="arr">↗</span></a>
-      </div>
-    </div>
-    <div class="photo">
-      <img src="photo.jpeg" alt="Shriya Sudhakar" onerror="this.style.display='none';this.parentNode.innerHTML='<div class=\'photo-init\'>SS</div>'">
-    </div>
-  </div>
-  <hr class="rule">
-  <div style="padding-bottom:6rem;">
-    <p class="slabel">Recent</p>
-    <div>
-      <div class="news-row reveal">
-        <span class="ndate">May 2026</span>
-        <span class="ntext">Preprint on <strong><a href="https://arxiv.org/abs/2605.01640">Prescriptive Scaling Laws for Data Constrained Training</a></strong> is now available!</span>
-      </div>
-      <div class="news-row reveal">
-        <span class="ndate">Aug 2025</span>
-        <span class="ntext">Started as <strong>Head TA</strong> for CS 3780: Introduction to Machine Learning.</span>
-      </div>
-      <div class="news-row reveal">
-        <span class="ndate">May 2025</span>
-        <span class="ntext">Joined <strong>Google Sheets AI</strong>.</span>
-      </div>
-      <div class="news-row reveal">
-        <span class="ndate">Jan 2025</span>
-        <span class="ntext">Started as <strong>TA</strong> for CS 3780: Introduction to Machine Learning.</span>
-      </div>
-    </div>
-  </div>
-</div>
-<footer>&copy; 2026 Shriya Sudhakar</footer>
-<script src="shared.js"></script>
+  </section>
+
+  <!-- TEACHING -->
+  <section id="teaching">
+    <h2>Teaching</h2>
+    <ul class="bullets">
+      <li><b>CS 221: Artificial Intelligence: Principles and Techniques</b>, Stanford. Graduate Course Assistant (Autumn 2026).</li>
+      <li><b>CS 3780: Introduction to Machine Learning</b>, Cornell. Head TA (Fall 2025, Spring 2026), TA (Spring 2025).</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer><a href="https://github.com/jonbarron/jonbarron.github.io">Link to template</a></footer>
+
+
+<script>
+function T(){
+  var h=document.documentElement;
+  var n=h.getAttribute('data-theme')==='dark'?'light':'dark';
+  h.setAttribute('data-theme',n);
+  localStorage.setItem('th',n);
+}
+</script>
 </body>
 </html>
