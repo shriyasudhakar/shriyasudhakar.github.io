@@ -154,6 +154,14 @@ footer a { color: var(--dim); }
 @media (max-width: 640px) {
   .hero { grid-template-columns: 1fr; gap: 16px; padding-top: 48px; }
   .photo { order: -1; width: 140px; height: 140px; margin: 0 auto; }
-  .paper { grid-template-columns: 1fr; gap: 10px; margin: 8px 0 0; }
+  .paper { grid-template-columns: 1fr; gap: 6px; padding: 12px 12px; margin: 4px -12px 0; }
+  .thumb { background: var(--hl); border-radius: 8px; padding: 6px 0; margin-bottom: 6px; }
+  .paper.hl .thumb { background: rgba(255,255,255,.55); }
+  [data-theme="dark"] .paper.hl .thumb { background: rgba(0,0,0,.2); }
+  .thumb svg { width: 150px; height: 103px; margin: 0 auto; }
+  .ptitle { font-size: 16px; }
+  .desc { margin-top: 6px; }
+  h1 { font-size: 32px; }
+  section { padding-top: 20px; }
   .news li { grid-template-columns: 1fr; gap: 0; }
 }
